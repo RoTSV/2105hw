@@ -143,18 +143,78 @@ let str = [];
  }
  console.log(num);
  console.log(str);*/
-let arr = [11, 34, 67, 'Привет', 4, 'Hello', 25, 33, 'Пока', [143, '22222']];
+/*let arr = [11, 34, 67, 'Привет', 4, 'Hello', 25, 33, 'Пока', [143, 'fddfdfd']];
 let num = [];
 let str = [];
-    for ( i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++){
      if(typeof arr[i] === 'number'){
          num.push(arr[i]);     
     } else if(typeof arr[i] === 'string'){
          str.push(arr[i]);
-    } else if(typeof arr[i] === 'object'){
-        num.push(arr[i]);
+    } 
+    else if(typeof arr[i] === 'object'){
+    for( let j=0; j<arr[i].length; j++){
+        if(typeof arr[i][j] === 'number'){
+            num.push(arr[i][j]);
+        } else if(typeof arr[i][j] === 'string'){
+            str.push(arr[i][j]);
+        }    
+    } 
     }
  }
  console.log(num);
- console.log(str);
- 
+ console.log(str);*/
+ /*let arr=[22, 34, 23, 45, 34 ];
+ arr.pop();
+ arr.pop();
+ arr.unshift(-1);
+ arr.shift();
+ console.log(arr);*/
+ /*let kochok = {
+     name: 'Серёга',
+     weight: '103kg',
+     ant: {
+         bicops: 46,
+         chest:130
+     }
+    };
+    kochok.ant.legs = 60;
+    /*console.log('Этого качка зовут ', kochok.name, '\n Весит он ', kochok.weight, 'Бицепс у него ', kochok.ant.bicops);*/
+
+    let kochok = {
+        name: 'Серёга',
+        weight: '103kg',
+        ant: {
+            bicops: 46,
+            chest:130
+        },
+        says: function(){
+            /*console.log('Сегодня грудь')*/
+        },
+       };
+       kochok.says();
+       kochok.last_year= {
+        bicops: 42,
+        chest: 124,
+        legs: 42
+    };
+    kochok.result = kochok.ant.bicops - kochok.last_year.bicops;
+    console.log(kochok.result)
+    for(let i in kochok){
+       /* console.log(kochok[i]);
+        console.log(i);*/
+        console.log(`Keys is ${i}: ${kochok[i]}`);
+        if(typeof kochok[i] === 'object'){
+            console.log(kochok[i]);
+            for(let j in kochok[i]){
+                if(typeof kochok[i][j] === 'string'){
+                    console.log(kochok[j]);
+                    console.log(kochok[i][j]);
+                } else if(typeof kochok[i][j] === 'number'){
+                    console.log(kochok[j]);
+                }
+            }
+        } 
+    }
+    
+    
