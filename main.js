@@ -235,7 +235,7 @@ let str = [];
 
 
 
-    function calc() {
+   /* function calc() {
         let a = parseInt(document.getElementById('a').value);
         let b = parseInt(document.getElementById('b').value);
          a + b;
@@ -263,28 +263,48 @@ let str = [];
         bicops: 42,
         chest: 124,
         legs: 42
-    };
+       };*/
     
     /*console.log(kachok);*/
-    for(let i in kachok){
-         console.log(kachok[i]);
-         console.log(i);
-         console.log(`Keys is ${i}: ${kachok[i]}`);
-        if(typeof kachok[i] === 'object'){
-             console.log(kachok[i]);
-            if(typeof kachok[i] ==='string'){
-                 console.log(kachok[i]);
-             } else if(typeof kachok[i] === 'number'){
-                 console.log(kachok[i]);
-             }
-            for(let j in kachok[i]){
-                if(typeof kachok[i][j] === 'string'){
-                    console.log(kachok[i][j]);
-                } else if(typeof kachok[i][j] === 'number'){
-                    console.log(kachok[i][j]);
-                } 
-                
-                
-            }
-        } 
+/*for(let i in kachok){
+console.log(kachok[i]);
+console.log(i);
+console.log(`Keys is ${i}: ${kachok[i]}`);
+if(typeof kachok[i] === 'object'){
+    console.log(kachok[i]);
+if(typeof kachok[i] ==='string'){
+        console.log(kachok[i]);
+    } else if(typeof kachok[i] === 'number'){
+        console.log(kachok[i]);
     }
+for(let j in kachok[i]){
+    if(typeof kachok[i][j] === 'string'){
+        console.log(kachok[i][j]);
+    } else if(typeof kachok[i][j] === 'number'){
+        console.log(kachok[i][j]);
+    } 
+    
+    
+}
+} 
+}*/
+
+/*document.querySelector('div').innerHTML='Это див первый див';*/
+/*let a=document.querySelector('div').innerHTML;
+console.log(a);
+let element= document.querySelector('div');
+element.style.backgroundColor='#000000';
+element.addEventListener('mouseover', function(){
+    element.style.backgroundColor='#ffff';
+}
+)
+element.addEventListener('mouseout', function(){
+    element.style.backgroundColor='#000000';
+}
+)*/
+let input = document.querySelector('input');
+let div = document.querySelector('div');
+input.addEventListener('change', function(){
+    console.log(input.value);
+    div.innerHTML=input.value;
+})
